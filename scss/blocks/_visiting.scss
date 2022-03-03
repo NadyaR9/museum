@@ -1,0 +1,73 @@
+.visiting {
+
+    &__title {
+        position: relative;
+        @include before_title;
+    }
+    &__wrapper {
+        margin-top: 103px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 60px;
+        row-gap: 75px;
+    }
+    &__card {
+        display: block;
+        position: relative;
+        &-img {
+            width: 440px;
+            height: 285px;
+        }
+        &-title {
+            
+            margin-top: 25px;
+            font-family: var(--font2);
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 35px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: #000000;
+        }
+        &-tour {
+            margin-top: 22px;
+            font-weight: 200;
+            font-size: 22px;
+            line-height: 26px;
+            color: #000000;
+        }
+        &-view {
+            margin-top: 10px;
+            font-weight: 200;
+            font-size: 18px;
+            line-height: 21px;
+            color: #000000;
+        }
+        &:hover {
+            text-decoration: none;
+            transition: 0.5s all;
+            &:before {
+                content: '';
+                transition: 0.5s all;
+                position: absolute;
+                width: 440px;
+                height: 2px;
+                left: 0;
+                top: 355px;
+                background: #710707;
+            }
+        }
+        &:before {
+            content: '';
+            transition: 0.5s all;
+            position: absolute;
+            width: 300px;
+            height: 2px;
+            left: 0;
+            top: 355px;
+            background: #710707;
+        }
+    }
+
+}

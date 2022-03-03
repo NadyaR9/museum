@@ -1,0 +1,27 @@
+@mixin hover_title {
+    &:hover {
+        color: var(--font-gold);
+    }
+}
+@mixin hover_link {
+    &:hover {
+        text-decoration: none;
+        color: var(--font-gold);
+    }
+}
+@mixin hover_button {
+    &:hover {
+        background: var(--font-gold);
+    }
+}
+@mixin before_title {
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 115px;
+        height: 3px;
+        width: 100%;   
+        background: #710707;
+    }
+}

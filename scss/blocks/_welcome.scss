@@ -1,0 +1,109 @@
+.welcome {
+    //height: calc(100vh - 150px);
+    height: 810px;
+    padding-bottom: 60px;
+    background: var(--bg-dark);
+    &__wrapper {
+        display: flex;
+        position: relative;
+        height: 750px;
+        //height: calc(100vh - 210px);
+    }
+    &__slider {
+
+        &-item {
+            background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.5) 16.19%, rgba(0, 0, 0, 0) 30.73%), url(../assets/img/welcome-slider/1.jpg), center / contain;
+            background-repeat: no-repeat;
+            display: none;
+            height: 100%;
+            width: 1000px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            // img {
+            //     width: 100%;
+            //     height: 100%;
+            //     object-fit: cover;
+            // }
+        }
+        &-item.active {
+            display: block;
+        }
+        &-dot {
+            width: 16px;
+            height: 16px;
+            background: #FFFFFF;
+            transition: 0.5s all;
+            cursor: pointer;
+            &:hover {
+                background: var(--font-gold);
+            }
+        }
+        &-dots {
+            width: 180px;
+            display: flex;
+            justify-content: space-between;
+        }
+        &-dot.active {
+            background: #D2B183;
+        }
+        &-numbers {
+            width: 76px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 40px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+        }
+        &-arrows {
+            width: 80px;
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+            svg {
+                transition: 0.5s all;
+                fill: #FFFFFF;
+                &:hover {
+                    fill: var(--font-gold);
+                }
+            }
+        }
+        &-pagination {
+            width: 600px;
+            height: 120px;
+            position: absolute;
+            right: 0;
+            bottom: -60px;
+            background: var(--bg-dark);
+            padding: 0 75px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    &__text {      
+        z-index: 2;
+        margin-top: 150px;
+        width: 598px;
+        height: 388px;
+    }
+    a {
+        color: var(--font-light);
+        text-decoration: none;
+    }
+    &__button {
+        margin-top: 75px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__subtitle {
+        margin-top: 25px;
+        line-height: 33px;
+        letter-spacing: 2px;
+    }
+    
+}

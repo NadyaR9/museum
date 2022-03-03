@@ -1,0 +1,162 @@
+.video {
+    &__introduce {
+        display: flex;
+        //column-gap: 115px;
+        justify-content: space-between;
+    }
+    &__descr {
+        width: 720px;
+        font-weight: 300;
+        font-size: 22px;
+        line-height: 38px;
+        display: flex;
+        align-items: center;
+        color: #000000;
+    }
+    &__title {
+        letter-spacing: 5px;
+    }
+    &__main {
+        position: relative;
+        margin-top: 75px;
+        font-size: 0;
+        &-video {
+            width: 100%;           
+            height: 735px;
+            overflow: hidden;
+            padding: 0;
+            margin: 0;
+            video {
+                width: 100%;
+                height: 100%;
+                object-fit: fill;
+            }
+        }
+        &-control {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            padding: 0 30px;
+            width: 100%;
+            height: 85px;
+            background: var(--bg-dark);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+    &__start {
+        position: absolute;
+        top: 44%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+    }
+    &__slider {
+        margin-top: 40px;
+        width: 100%;
+        &-wrapper {
+            display: flex;
+            column-gap: 42px;
+        }
+        &-item {
+            position: relative;
+            width: 452px;
+            height: 254px;
+            &__settings {
+                position: absolute;
+                right: 0;
+            }
+            &__descr {
+                position: relative;
+                width: 406px;
+                height: 40px;
+                position: absolute;
+                top: 15px;
+                left: 10px;
+                display: flex;
+                align-items: center;
+                span {
+                    padding-left: 10px;
+                    font-weight: 400;
+                    font-size: 18px;
+                    color: #FFFFFF;
+                }
+                &:hover {
+                    text-decoration: none;
+                }
+
+            }
+            &__img {
+                width: 100%;
+                img {
+                    width: 100%;
+                }
+            }
+            
+        }
+        &-pagination {
+            width: 200px;
+            height: 12px;
+            margin: 0 auto;
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            svg {
+                fill: #999999;
+                cursor: pointer;
+                transition: 0.5s all;
+                &:hover {
+                    fill: #710707;
+                    transition: 0.5s all;
+                }
+            }
+            span {
+                width: 12px;
+                height: 12px;
+                border-radius: 100%;
+                background: #999999;
+                cursor: pointer;
+                transition: 0.5s all;
+                &:hover {
+                    background: #710707;
+                    transition: 0.5s all;
+                }
+            }
+            span.active {
+                background: #333333;
+            }
+        }
+    }
+}
+.control {
+    &__volume, &__transform, &__play {
+        cursor: pointer;
+    }
+    &__progress {
+       
+        border-radius: 0px;
+        height: 8px;
+        outline: none;
+        transition: background 450ms ease-in;
+        cursor: pointer;
+        -webkit-appearance: none;
+        &_video {
+            width: 929px;
+            background: linear-gradient(to right, #710707 0%, #710707 54%, #C4C4C4 54%, #C4C4C4 100%);
+        }
+        &_sound {
+            width: 155px;
+            background: linear-gradient(to right, #710707 0%, #710707 40%, #C4C4C4 40%, #C4C4C4 100%);
+        }
+    }    
+    &__progress::-webkit-slider-thumb {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        -webkit-appearance: none;
+        cursor: ew-resize;
+        background: #FFFFFF;
+    }
+}

@@ -1,0 +1,44 @@
+.section-title {
+    font-family: var(--font2);
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--fz-section);
+    line-height: 90px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    transition: all 0.3s;
+    &_dark {
+        color: var(--bg-dark);     
+    }
+    &_light {
+        color: var(--font-light);     
+    }
+    &_gold {
+        color: var(--font-gold);
+    }
+    //@include hover_title;
+}
+.title {
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    color: var(--bg-dark);
+    transition: all 0.3s;
+    &_light {
+        color: var(--font-light);
+    }
+    &_32 {
+        font-size: 32px;
+    }
+    &_28 {
+        font-weight: 300;
+        font-size: 28px;
+    }
+    &_22 {
+        font-size: 22px;
+    }
+    &_18 {
+        font-size: 18px;
+    }
+    @include hover_title;
+}

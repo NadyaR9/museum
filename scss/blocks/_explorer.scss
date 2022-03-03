@@ -1,0 +1,30 @@
+.explorer {
+    &__wrapper {
+        display: flex;
+        gap: 60px;
+    }
+    &__title {
+        position: relative;
+        @include before_title;
+    }
+    &__descr {
+        margin-top: 103px;
+        width: 660px;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 22px;
+        line-height: 38px;
+        color: var(--font-light);
+        p {
+            padding-bottom: 26px;
+        }
+        span {
+            color: var(--font-gold);
+        }
+    }
+    &__picture {
+        margin-top: 16px;
+        width: 720px;
+        height: 700px;
+    }
+}

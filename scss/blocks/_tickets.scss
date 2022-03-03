@@ -1,0 +1,165 @@
+.tickets {
+
+    &__title {
+        position: relative;
+        @include before_title;
+    }
+    &__wrapper {
+        margin-top: 103px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__img {
+        width: 720px;
+        height: 550px;
+        img {
+            width: 100%;
+        }
+    }
+    &__buy {
+        width: 660px;
+        display: flex;
+        justify-content: space-between;
+        &-radio {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+        }
+        &-title {
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 33px;
+            color: #000000;
+            &_right {
+                text-align: right;
+            }
+        }
+    }
+    &__total {
+        margin: 40px 0 60px 0;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 33px;
+        letter-spacing: 1.65px;
+        text-align: right;
+        color: #000000;
+    }
+    &__buttons {
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    &__category {
+        width: 150px;
+        margin-bottom: 15px;
+        font-weight: 300;
+        font-size: 22px;
+        line-height: 26px;
+        text-align: left;
+        color: #000000;
+    }
+    &__button {
+        width: 150px;
+        height: 50px;
+        border: 3px solid #000000;
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 10px;
+        
+        button {
+            border: none;
+            font-weight: normal;
+            font-size: 32px;
+            line-height: 37px;
+            text-align: center;
+            color: #000000;
+            background: none;
+            
+            &:focus {
+                outline: none;
+                border: none;
+            }
+            // 
+        }
+        input {
+            // margin-left: 5px;
+            all: unset;
+            width: 40px;
+            font-weight: 300;
+            font-size: 22px;
+            line-height: 26px;
+            text-align: right;
+            color: #000000;   
+            outline: none;
+            border: none;
+            &:focus {
+                outline: none;
+                border: none;
+            }
+        }
+        
+        
+    }
+}
+.radio {
+    &__container {
+        font-weight: 300;
+        font-size: 22px;
+        line-height: 26px;
+        color: #000000;
+        position: relative;
+        padding-left: 40px;
+        margin-bottom: 25px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            &:checked ~ .radio__checkmark:after {
+                display: block;
+            }
+        }
+    }
+    &__checkmark {
+        position: absolute;
+        margin: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        width: 17px;
+        height: 17px;
+        border: 2px solid #000000;
+        box-sizing: border-box;
+        border-radius: 50%;
+        background-color: none;
+    }
+}
+.radio__container .radio__checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    width: 7px;
+    height: 7px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: #000000;
+}
+.radio__container input:checked ~ .radio__checkmark:after {
+    display: block;
+}
+
+.btn-right {
+    margin-right: 10px;
+}
+.btn-left {
+    margin-left: 10px;
+}
